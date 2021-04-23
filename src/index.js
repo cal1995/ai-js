@@ -1,5 +1,5 @@
-const formatDate = (d, fmt = 'yyyy-MM-dd') => {
-    if(!d) {
+const formatDate = (date, fmt = 'yyyy-MM-dd') => {
+    if(!date) {
         return ''
     }
     var o = { 
