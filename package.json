@@ -1,0 +1,27 @@
+{
+  "name": "alunchen-js",
+  "version": "1.0.0",
+  "description": "ai-js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lib": "babel src/index.js --out-file lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cal1995/ai-js.git"
+  },
+  "keywords": [
+    "alunchen-js"
+  ],
+  "author": "alunchen",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/cal1995/ai-js/issues"
+  },
+  "homepage": "https://github.com/cal1995/ai-js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
