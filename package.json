@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lib": "babel src/index.js --out-file lib/index.js"
+    "lib": "babel src/index.js --out-file lib/index.js",
+    "lint": "eslint src/* --fix"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,21 @@
   },
   "homepage": "https://github.com/cal1995/ai-js#readme",
   "devDependencies": {
+    "@tencent/eslint-config-tencent": "^0.13.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
-  }
+    "babel-eslint": "^10.1.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^7.25.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "vue-eslint-parser": "^7.6.0"
+  },
+  "dependencies": {}
 }
