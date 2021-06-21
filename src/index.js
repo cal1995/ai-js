@@ -1,29 +1,31 @@
-const formatDate = (date, fmt = 'yyyy-MM-dd') => {
-    if (!date) {
-        return '';
-    }
-    let result = fmt;
-    const o = {
-        'M+': date.getMonth() + 1, // 月份
-        'd+': date.getDate(), // 日
-        'h+': date.getHours(), // 小时
-        'm+': date.getMinutes(), // 分
-        's+': date.getSeconds(), // 秒
-        'q+': Math.floor((date.getMonth() + 3) / 3), // 季度
-        S: date.getMilliseconds() // 毫秒
-    };
-    if (/(y+)/.test(result)) {
-        result = result.replace(RegExp.$1, (`${date.getFullYear()}`).substr(4 - RegExp.$1.length));
-    }
-    // eslint-disable-next-line
-    for (const k in o) {
-        if (new RegExp(`(${k})`).test(result)) {
-            result = result.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : ((`00${o[k]}`).substr((`${o[k]}`).length)));
-        }
-    }
-    return result;
+import { accAdd, accSub, floatMul, floatDiv } from './util/math.js';
+import { formatDate, deepClone } from './util/assist.js';
+import { validateMoney, validateAccount, validateNum, validateDate } from './util/validate.js';
+
+export {
+  accAdd,
+  accSub,
+  floatMul,
+  floatDiv,
+  formatDate,
+  deepClone,
+  validateMoney,
+  validateAccount,
+  validateNum,
+  validateDate
 };
 
-export default {
-    formatDate
+const util = {
+  accAdd,
+  accSub,
+  floatMul,
+  floatDiv,
+  formatDate,
+  deepClone,
+  validateMoney,
+  validateAccount,
+  validateNum,
+  validateDate
 };
+
+export default util;

@@ -1,11 +1,11 @@
 {
   "name": "alunchen-js",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "ai-js",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lib": "babel src/index.js --out-file lib/index.js",
+    "lib": "babel src --out-dir lib",
     "lint": "eslint src/* --fix"
   },
   "repository": {
